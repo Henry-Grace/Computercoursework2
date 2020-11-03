@@ -1,0 +1,29 @@
+p {
+    color: white;
+}
+
+body {
+    background-color: #434442;
+}
+
+h1 {
+    color: white;
+    font-size: 69px;
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+}
+
+a {
+    color:white;
+}
+
+.boxed {
+    border: 1px solid green ;
+}
+
+body {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+}
