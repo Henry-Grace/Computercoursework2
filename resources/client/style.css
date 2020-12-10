@@ -20,10 +20,9 @@ a {
     border: 1px solid green ;
 }
 
-body {
-    height: 100%;
-}
-
-body {
-    overflow: hidden;
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
