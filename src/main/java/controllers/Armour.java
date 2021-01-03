@@ -22,7 +22,7 @@ public class Armour{
         System.out.println("Invoked Armour.ArmourList()");
         JSONArray response = new JSONArray();
         try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT ArmourID, Name, Description, Durability, Material, Class, ArModsID, FROM Armlists");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT ArmourID, Name, Description, Durability, Material, Class, ArModsID FROM Armlists");
             ResultSet results = ps.executeQuery();
             while (results.next()==true) {
                 JSONObject row = new JSONObject();
