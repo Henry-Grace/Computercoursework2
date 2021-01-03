@@ -19,7 +19,7 @@ public class Damage{
     @GET
     @Path("list")
     public String DamageList() {
-        System.out.println("Invoked Ammo.AmmoList()");
+        System.out.println("Invoked Damage.DamageList()");
         JSONArray response = new JSONArray();
         try {
             PreparedStatement ps = Main.db.prepareStatement("SELECT DamageID, Damage, Penetration, Caliber, AmmoID, FROM Damagelists");

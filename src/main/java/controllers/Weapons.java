@@ -11,29 +11,28 @@ import javax.ws.rs.core.MediaType;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-@Path("Ammo/")
+@Path("Weapons/")
 @Consumes(MediaType.MULTIPART_FORM_DATA)
 @Produces(MediaType.APPLICATION_JSON)
 
-public class Ammo{
+public class Weapons{
     @GET
     @Path("list")
-    public String AmmoList() {
-        System.out.println("Invoked Ammo.AmmoList()");
+    public String WeaponList() {
+        System.out.println("Invoked Weapon.DamageList()");
         JSONArray response = new JSONArray();
         try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT AmmoID, Name, Description, AmmoURL, DamageID, WeaponID FROM Ammolist");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT WeaponID, Name, Description, WeaponURL, AmmoID, WeaModsID FROM Wealists");
             ResultSet results = ps.executeQuery();
             while (results.next()==true) {
                 JSONObject row = new JSONObject();
-                row.put("AmmoID", results.getInt(1));
+                row.put("WeaponID", results.getInt(1));
                 row.put("Name", results.getString(2));
                 row.put("Description", results.getString(3));
-                row.put("AmmoURL", results.getString(4));
-                row.put("DamageID", results.getString(5));
-                row.put("WeaponID", results.getString(6));
+                row.put("WeaponURL", results.getString(4));
+                row.put("AmmoID", results.getString(5));
+                row.put("WeaModsID", results.getString(6));
                 response.add(row);
-                // This is a comment
             }
             return response.toString();
         } catch (Exception exception) {

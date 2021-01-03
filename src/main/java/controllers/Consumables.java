@@ -11,29 +11,27 @@ import javax.ws.rs.core.MediaType;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-@Path("Ammo/")
+@Path("Consumables/")
 @Consumes(MediaType.MULTIPART_FORM_DATA)
 @Produces(MediaType.APPLICATION_JSON)
 
-public class Ammo{
+public class Consumables{
     @GET
     @Path("list")
-    public String AmmoList() {
-        System.out.println("Invoked Ammo.AmmoList()");
+    public String ConList() {
+        System.out.println("Invoked Con.ConList()");
         JSONArray response = new JSONArray();
         try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT AmmoID, Name, Description, AmmoURL, DamageID, WeaponID FROM Ammolist");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT ConsumableID, Name, Description, Affect, ConURL, FROM Conlist");
             ResultSet results = ps.executeQuery();
             while (results.next()==true) {
                 JSONObject row = new JSONObject();
-                row.put("AmmoID", results.getInt(1));
+                row.put("ConsumableID", results.getInt(1));
                 row.put("Name", results.getString(2));
                 row.put("Description", results.getString(3));
-                row.put("AmmoURL", results.getString(4));
-                row.put("DamageID", results.getString(5));
-                row.put("WeaponID", results.getString(6));
+                row.put("Affect", results.getString(4));
+                row.put("ConURL", results.getString(5));
                 response.add(row);
-                // This is a comment
             }
             return response.toString();
         } catch (Exception exception) {
