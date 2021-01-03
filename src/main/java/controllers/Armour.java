@@ -18,7 +18,7 @@ import java.sql.ResultSet;
 public class Armour{
     @GET
     @Path("list")
-    public String ArmourList() {
+    public String Armourlist() {
         System.out.println("Invoked Armour.ArmourList()");
         JSONArray response = new JSONArray();
         try {
