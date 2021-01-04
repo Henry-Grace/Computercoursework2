@@ -22,7 +22,7 @@ public class Damage{
         System.out.println("Invoked Damage.DamageList()");
         JSONArray response = new JSONArray();
         try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT DamageID, Damage, Penetration, Caliber, AmmoID, FROM Damagelists");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT DamageID, Damage, Penetration, Caliber, AmmoID FROM Damagelists");
             ResultSet results = ps.executeQuery();
             while (results.next()==true) {
                 JSONObject row = new JSONObject();

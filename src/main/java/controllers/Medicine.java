@@ -22,7 +22,7 @@ public class Medicine{
         System.out.println("Invoked Med.MedList()");
         JSONArray response = new JSONArray();
         try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT MedicalID, Name, Description, Affect, MedURL, FROM Medlists");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT MedicalID, Name, Description, Affect, MedURL FROM Medlists");
             ResultSet results = ps.executeQuery();
             while (results.next()==true) {
                 JSONObject row = new JSONObject();

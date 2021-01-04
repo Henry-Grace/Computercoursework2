@@ -22,7 +22,7 @@ public class Characters{
         System.out.println("Invoked Char.CharList()");
         JSONArray response = new JSONArray();
         try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT CharacterID, Name, Description, Hitpoints, CharacterURL, WeaponID, ArmourID, MiscID, FROM Charlists");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT CharacterID, Name, Description, Hitpoints, CharacterURL, WeaponID, ArmourID, MiscID FROM Charlists");
             ResultSet results = ps.executeQuery();
             while (results.next()==true) {
                 JSONObject row = new JSONObject();

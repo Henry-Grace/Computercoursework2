@@ -22,7 +22,7 @@ public class Misc{
         System.out.println("Invoked Misc.MiscList()");
         JSONArray response = new JSONArray();
         try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT MiscID, Name, Description, MiscURL, FROM Misclists");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT MiscID, Name, Description, MiscURL FROM Misclists");
             ResultSet results = ps.executeQuery();
             while (results.next()==true) {
                 JSONObject row = new JSONObject();

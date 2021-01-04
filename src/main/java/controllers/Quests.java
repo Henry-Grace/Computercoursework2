@@ -22,7 +22,7 @@ public class Quests{
         System.out.println("Invoked Quest.QuestList()");
         JSONArray response = new JSONArray();
         try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT QuestID, Name, Description, Requirements, Rewards, TraderID, QuestURL, FROM Quests");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT QuestID, Name, Description, Requirements, Rewards, TraderID, QuestURL FROM Quests");
             ResultSet results = ps.executeQuery();
             while (results.next()==true) {
                 JSONObject row = new JSONObject();

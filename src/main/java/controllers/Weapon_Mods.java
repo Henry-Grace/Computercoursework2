@@ -22,7 +22,7 @@ public class Weapon_Mods{
         System.out.println("Invoked WeaMods.WeaModsList()");
         JSONArray response = new JSONArray();
         try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT WeaModsID, Name, Description, WeaModsURL, WeaponID, FROM Weamods");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT WeaModsID, Name, Description, WeaModsURL, WeaponID FROM Weamods");
             ResultSet results = ps.executeQuery();
             while (results.next()==true) {
                 JSONObject row = new JSONObject();

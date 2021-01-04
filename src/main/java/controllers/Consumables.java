@@ -22,7 +22,7 @@ public class Consumables{
         System.out.println("Invoked Con.ConList()");
         JSONArray response = new JSONArray();
         try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT ConsumableID, Name, Description, Affect, ConURL, FROM Conlist");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT ConsumableID, Name, Description, Affect, ConURL FROM Conlist");
             ResultSet results = ps.executeQuery();
             while (results.next()==true) {
                 JSONObject row = new JSONObject();

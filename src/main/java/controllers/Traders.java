@@ -22,7 +22,7 @@ public class Traders{
         System.out.println("Invoked Trader.TraderList()");
         JSONArray response = new JSONArray();
         try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT TraderID, Name, Description, AmmoID, WeaponID, MedID, ArmourID, TraderURL, QuestID, FROM Traders");
+            PreparedStatement ps = Main.db.prepareStatement("SELECT TraderID, Name, Description, AmmoID, WeaponID, MedID, ArmourID, TraderURL, QuestID FROM Traders");
             ResultSet results = ps.executeQuery();
             while (results.next()==true) {
                 JSONObject row = new JSONObject();
