@@ -15,8 +15,8 @@ function MyFunction() {
         elem.innerHTML = cent;
     }
     else {
-        elem.value = "Shitty Test";
-        elem.innerHTML = "Shitty Test";
+        elem.value = "DEAD";
+        elem.innerHTML = "DEAD";
     }
 }
 
