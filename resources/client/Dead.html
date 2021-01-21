@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<title>EFT-ABC</title>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {box-sizing: border-box;}
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px 30px;
+            text-decoration: none;
+            font-size: 30px;
+        }
+
+        .topnav a:hover {
+            background-color: #ff001c;
+            color: white;
+        }
+
+        .topnav a.active {
+            background-color: #000000;
+            color: white;
+        }
+
+        .topnav .search-container {
+            float: right;
+        }
+
+        .topnav input[type=text] {
+            padding: 12px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+        }
+
+        .topnav .search-container button {
+            float: right;
+            padding: 12px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .topnav .search-container button:hover {
+            background: #ccc;
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav .search-container {
+                float: none;
+            }
+            .topnav a, .topnav input[type=text], .topnav .search-container button {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+            .topnav input[type=text] {
+                border: 1px solid #ccc;
+            }
+        }
+    </style>
+</head>
+
+<script type="text/javascript" src="Cal.js"></script>
+<body>
+
+<div class="topnav">
+    <a class="active" href="http://localhost:63342/Computercoursework2/resources/client/index.html">EFT-ABC</a>
+    <a href="http://localhost:63342/Computercoursework2/resources/client/Calculator.html">Calculator</a>
+    <a href="http://localhost:63342/Computercoursework2/resources/client/Items.html">Items</a>
+    <a href="http://localhost:63342/Computercoursework2/resources/client/Quests.html">Quests</a>
+    <a href="http://localhost:63342/Computercoursework2/resources/client/Resources.html">Resources</a>
+    <div class="search-container">
+        <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+</body>
+<head>
+    <meta charset="UTF-8">
+    <h1 style="text-align:center;">Damage Calculator</h1><title></title>
+</head>
+<div class="wrapper">
+    <dead>DEAD</dead>
+</div>
+<div class="wrapper">
+    <button onclick="document.location='Calculator.html'">Return</button>
+</div>
+
+
+</html>
