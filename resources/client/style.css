@@ -79,3 +79,8 @@ dead {
     font-size: 300px;
     font-family: "Agency FB";
 }
+
+label {
+    color: white;
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+}
