@@ -15,8 +15,7 @@ function MyFunction() {
         elem.innerHTML = cent;
     }
     else {
-        elem.value = "DEAD";
-        elem.innerHTML = "DEAD";
+        document.location="Dead.html"
     }
 }
 
@@ -35,8 +34,7 @@ function MyFunction1() {
         elem.innerHTML = cent;
     }
     else {
-        elem.value = "DEAD";
-        elem.innerHTML = "DEAD";
+        document.location="Dead.html"
     }
 }
 
@@ -55,8 +53,7 @@ function MyFunction2() {
         elem.innerHTML = cent;
     }
     else {
-        elem.value = "DEAD";
-        elem.innerHTML = "DEAD";
+        document.location="Dead.html"
     }
 }
 
@@ -75,8 +72,7 @@ function MyFunction3() {
         elem.innerHTML = cent;
     }
     else {
-        elem.value = "DEAD";
-        elem.innerHTML = "DEAD";
+        document.location="Dead.html"
     }
 }
 
@@ -95,8 +91,7 @@ function MyFunction4() {
         elem.innerHTML = cent;
     }
     else {
-        elem.value = "DEAD";
-        elem.innerHTML = "DEAD";
+        document.location="Dead.html"
     }
 }
 
@@ -115,8 +110,7 @@ function MyFunction5() {
         elem.innerHTML = cent;
     }
     else {
-        elem.value = "DEAD";
-        elem.innerHTML = "DEAD";
+        document.location="Dead.html"
     }
 }
 
@@ -135,8 +129,6 @@ function MyFunction6() {
         elem.innerHTML = cent;
     }
     else {
-        elem.value = "DEAD";
-        elem.innerHTML = "DEAD";
+        document.location="Dead.html"
     }
 }
-
